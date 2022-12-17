@@ -5,15 +5,21 @@ import TheWelcome from './components/TheWelcome.vue'
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
+    <img alt="Vue logo" class="logo" src="./assets/images/logo.svg" width="125" height="125" />
+    <img alt="Vue logo" class="logo" src="./assets/images/logo-bonus.svg" width="125" height="125" />
+    <img alt="Vue logo" class="logo" src="./assets/images/image-rules.svg" width="125" height="125" />
+    <img alt="Vue logo" class="logo" src="./assets/images/image-rules-bonus.svg" width="125" height="125" />
+    <img alt="Vue logo" class="logo" src="./assets/images/icon-spock.svg" width="125" height="125" />
+    <img alt="Vue logo" class="logo" src="./assets/images/icon-scissors.svg" width="125" height="125" />
+    <img alt="Vue logo" class="logo" src="./assets/images/icon-rock.svg" width="125" height="125" />
+    <img alt="Vue logo" class="logo" src="./assets/images/icon-paper.svg" width="125" height="125" />
+    <img alt="Vue logo" class="logo" src="./assets/images/icon-lizard.svg" width="125" height="125" />
+    <img alt="Vue logo" class="logo" src="./assets/images/icon-close.svg" width="125" height="125" />
+    <img alt="Vue logo" class="logo" src="./assets/images/bg-triangle.svg" width="125" height="125" />
+    <img alt="Vue logo" class="logo" src="./assets/images/bg-pentagon.svg" width="125" height="125" />
   </header>
 
   <main>
-    <TheWelcome />
   </main>
 </template>
 
