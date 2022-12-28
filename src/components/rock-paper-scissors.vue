@@ -1,6 +1,7 @@
 <script setup>
-
+import TheItemCircle from '@/components/the-item-circle.vue'
 </script>
+
 
 <template>
   <div class="game-container">
@@ -12,13 +13,26 @@
       </div>
     </header>
     <main>
-      <div class="item paper"><img alt="Vue logo" src="@/assets/images/icon-paper.svg"  /></div>
-      <div class="item scissors"><img alt="Vue logo" src="@/assets/images/icon-scissors.svg" /></div>
-      <div class="item rock"><img alt="Vue logo" src="@/assets/images/icon-rock.svg"  /></div>
-      
-      
-      
+      <the-item-circle 
+        :borderColor="'#5870f5'" 
+        borderColorShadow="#2c47c3"
+        :imagePath="'src/assets/images/icon-paper.svg'"
+      />
+      <the-item-circle 
+        :borderColor="'#eca019'" 
+        borderColorShadow="#c66c19"
+        :imagePath="'src/assets/images/icon-scissors.svg'"
+      />
+      <the-item-circle 
+        :borderColor="'#d93852'" 
+        :borderColorShadow="'#9a182f'"
+        :imagePath="'src/assets/images/icon-rock.svg'"
+        class="rock"
+      />
     </main>
+    <footer>
+      <button> rules </button>
+    </footer>
   </div>
   
 </template>
@@ -67,26 +81,33 @@ header{
 main{
   margin: 50px auto;
   width: 100%;
-  max-width: 500px;
+  max-width: 600px;
   display: grid;
+  height: 60vh;
   align-items: center;
   justify-items: center;
   grid-template-columns: repeat(2,minmax(0,1fr));
   grid-template-rows: repeat(2,minmax(0,1fr));
 }
-main .item{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100px;
-  height: 100px;
-  padding: 20px;
-  background: white;
-  border-radius: 50%;
-}
 
 main > .rock{
   grid-column: 1 / 3;
   grid-row: 2 / 3;
+}
+
+footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 40px;
+}
+footer button {
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 8px 22px;
+  border-radius: 4px;
 }
 </style>

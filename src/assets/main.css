@@ -1,6 +1,3 @@
 @import './base.css';
 @import './rps-style.css';
 
-#app {
-  max-width: 1280px;
-}
