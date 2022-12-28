@@ -1,7 +1,7 @@
 <template>
   <div class="item">
     <div class="item-rounded">
-      <img alt="Vue logo" :src="imagePath"  />
+      <img alt="Vue logo" :src="`@/assets/images/${imagePath}`"  />
     </div>
   </div>
 </template>

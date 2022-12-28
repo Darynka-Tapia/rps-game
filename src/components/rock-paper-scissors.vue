@@ -16,17 +16,17 @@ import TheItemCircle from '@/components/the-item-circle.vue'
       <the-item-circle 
         :borderColor="'#5870f5'" 
         borderColorShadow="#2c47c3"
-        :imagePath="'src/assets/images/icon-paper.svg'"
+        :imagePath="'icon-paper.svg'"
       />
       <the-item-circle 
         :borderColor="'#eca019'" 
         borderColorShadow="#c66c19"
-        :imagePath="'src/assets/images/icon-scissors.svg'"
+        :imagePath="'icon-scissors.svg'"
       />
       <the-item-circle 
         :borderColor="'#d93852'" 
         :borderColorShadow="'#9a182f'"
-        :imagePath="'src/assets/images/icon-rock.svg'"
+        :imagePath="'icon-rock.svg'"
         class="rock"
       />
     </main>
