@@ -1,16 +1,13 @@
 <template>
   <div class="item">
     <div class="item-rounded">
-      <img alt="Vue logo" :src="`@/assets/images/${imagePath}`"  />
+      <img alt="item image" :src="imagePath"  />
     </div>
   </div>
 </template>
 <script setup>
-  defineProps({
-    borderColor: String,
-    borderColorShadow: String,
-    imagePath: String
-  })
+  
+const props = defineProps(['borderColor', 'borderColorShadow', 'imagePath'])
 
 </script>
 

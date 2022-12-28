@@ -1,5 +1,9 @@
 <script setup>
 import TheItemCircle from '@/components/the-item-circle.vue'
+import TheScissors from '@/assets/images/icon-scissors.svg'
+import ThePaper from '@/assets/images/icon-paper.svg'
+import TheRock from '@/assets/images/icon-rock.svg'
+
 </script>
 
 
@@ -16,17 +20,17 @@ import TheItemCircle from '@/components/the-item-circle.vue'
       <the-item-circle 
         :borderColor="'#5870f5'" 
         borderColorShadow="#2c47c3"
-        :imagePath="'icon-paper.svg'"
+        :imagePath="TheScissors"
       />
       <the-item-circle 
         :borderColor="'#eca019'" 
         borderColorShadow="#c66c19"
-        :imagePath="'icon-scissors.svg'"
+        :imagePath="ThePaper"
       />
       <the-item-circle 
         :borderColor="'#d93852'" 
         :borderColorShadow="'#9a182f'"
-        :imagePath="'icon-rock.svg'"
+        :imagePath="TheRock"
         class="rock"
       />
     </main>
