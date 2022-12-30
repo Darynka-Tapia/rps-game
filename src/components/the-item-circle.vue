@@ -11,7 +11,7 @@ const props = defineProps(['borderColor', 'borderColorShadow', 'imagePath'])
 
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .item{
   display: flex;
   justify-content: center;
