@@ -1,3 +1,6 @@
 @import './base.css';
 @import './rps-style.css';
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

@@ -20,12 +20,12 @@ import TheRock from '@/assets/images/icon-rock.svg'
       <the-item-circle 
         :borderColor="'#5870f5'" 
         borderColorShadow="#2c47c3"
-        :imagePath="TheScissors"
+        :imagePath="ThePaper"
       />
       <the-item-circle 
         :borderColor="'#eca019'" 
         borderColorShadow="#c66c19"
-        :imagePath="ThePaper"
+        :imagePath="TheScissors"
       />
       <the-item-circle 
         :borderColor="'#d93852'" 
