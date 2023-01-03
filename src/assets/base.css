@@ -59,6 +59,7 @@
   font-weight: normal;
 }
 
+#app,
 body {
-
+  height: 100%;
 }
