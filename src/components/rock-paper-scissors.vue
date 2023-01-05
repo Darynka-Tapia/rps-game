@@ -1,9 +1,19 @@
 <script setup>
+import { ref } from 'vue';
 import AllItems from '@/components/all-items.vue';
 import OptionSelected from '@/components/option-selected.vue';
+import { useComponentChange } from '@/composables/useComponentChange.js';
 
+const {
+  componentToUse,
+  componentChange,
+  score
+} = useComponentChange();
+
+const itemForGame = ref('');
 function ItemSelected(option){
-  console.log('Desde el padre:', option);
+  itemForGame.value = option;
+  componentChange('c_result');
 }
 </script>
 
@@ -14,12 +24,19 @@ function ItemSelected(option){
       <img alt="Vue logo" class="logo" src="@/assets/images/logo.svg" width="125" height="80" />
       <div class="score">
         <p class="score__title">Score </p>
-        <p class="score__number">12</p>
+        <p class="score__number">{{ score }}</p>
       </div>
     </header>
     <main>
-      <!--  <all-items @ItemSelected="ItemSelected"/>-->
-      <OptionSelected />
+      <all-items 
+        v-if="componentToUse === 'c_select'"
+        @ItemSelected="ItemSelected"
+      /> 
+      <!--  -->
+      <OptionSelected
+        v-if="componentToUse === 'c_result'"
+        :item-for-game="itemForGame"
+      />
     <div class="rules">
       <button> rules </button>
     </div>
