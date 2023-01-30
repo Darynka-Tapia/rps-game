@@ -15,6 +15,12 @@ function ItemSelected(option){
   itemForGame.value = option;
   componentChange('c_result');
 }
+
+const isOpenRules = ref(false);
+function openRules(){
+  console.log('here');
+  isOpenRules.value = true;
+}
 </script>
 
 
@@ -38,11 +44,21 @@ function ItemSelected(option){
         :item-for-game="itemForGame"
       />
     <div class="rules">
-      <button> rules </button>
+      <button @click="openRules"> rules </button>
     </div>
     </main>
   </div>
   
+  <Teleport to="body">
+    <Transition>
+      <div v-if="isOpenRules" class="modal-container">
+        <div class="modal">
+          <button @click="isOpenRules = false" class="btn-close">X</button>
+          <img src="@/assets/images/image-rules.svg" alt="">
+        </div>
+      </div>
+    </Transition>
+  </Teleport>
 </template>
 
 <style lang="scss" scoped>
@@ -77,6 +93,34 @@ function ItemSelected(option){
         font-family: 'Barlow Semi Condensed', sans-serif;
       }
     }
+  }
+}
+
+.modal-container{
+  position: fixed;
+  z-index: 999;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background:rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal {
+  background: white;
+  padding: 20px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  & .btn-close{
+    align-self: flex-end;
+    color: red;
+    font-weight: 800;
+    margin-bottom: 25px;
+
   }
 }
 
