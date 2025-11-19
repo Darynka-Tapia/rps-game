@@ -61,7 +61,8 @@ function getRandomInt() {
     </div>
 </template>
 
-<style lang="scss" scope>
+<style scope>
+@import "tailwindcss";
     .rps-selected-container{
         @apply flex flex-col justify-center h-full gap-12;
         & .rps-option-selected{

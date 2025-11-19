@@ -61,7 +61,8 @@ function openRules(){
   </Teleport>
 </template>
 
-<style lang="scss" scoped>
+<style scoped>
+@import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap');
 .game-container{
   @apply w-full h-full py-10 px-0.5;

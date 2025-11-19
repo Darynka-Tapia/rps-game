@@ -11,7 +11,8 @@ const props = defineProps(['borderColor', 'borderColorShadow', 'imagePath'])
 
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
+@import "tailwindcss";
 .item{
   @apply flex justify-center items-center w-[150px] h-[150px] sm:w-[200px] sm:h-[200px] bg-white rounded-full cursor-pointer;
   border: 22px solid v-bind(borderColor);

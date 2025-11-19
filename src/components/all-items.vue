@@ -31,7 +31,8 @@ function itemSelected(option){
     </div>
 </template>
 
-<style lang="scss" scope>
+<style scope>
+@import "tailwindcss";
 .all-items-container{
     @apply flex flex-col justify-between;
     height: calc(100% - 94px);
